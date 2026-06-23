@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsiyon Hone 
+        | Portfolio</title>
+        <style>
+        body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f8f8f8;
+}
+
+nav {
+    border-top: 4px solid #0d4ea6;
+    border-bottom: 2px solid #0d4ea6;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 70px;
+}
+
+.logo {
+    font-size: 50px;
+    color: #0d4ea6;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0d4ea6;
+    margin-left: 30px;
+    font-size: 24px;
+}
+
+.hero {
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    padding: 70px;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+.hero-text h3 {
+    color: #0d4ea6;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.hero-text h1 {
+    font-size: 90px;
+    color: #0d4ea6;
+    margin: 0;
+}
+
+.hero-text h2 {
+    color: #0d4ea6;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.hero-text hr {
+    width: 80px;
+    margin-left: 0;
+    border: 2px solid #0d4ea6;
+}
+
+.hero-text p {
+    font-size: 28px;
+    line-height: 1.8;
+}
+
+button {
+    background: #0d4ea6;
+    color: white;
+
+    border: none;
+    padding: 18px 35px;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.quote {
+    border-top: 2px solid #0d4ea6;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px;
+}
+
+.quote-text {
+    text-align: center;
+    width: 70%;
+}
+
+.quote-text h1 {
+    color: #0d4ea6;
+    font-size: 55px;
+    line-height: 1.4;
+}
+
+.quote-text p {
+    color: #0d4ea6;
+    font-size: 30px;
+}
+
+.arrow {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    font-size: 30px;
+}</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></head><body>
+
+<nav>
+    <div class="logo">Tsiyon Hone</div>
+
+    <div class="nav-links">
+        <a href="#">Contact</a>
+        <a href="#">Experience</a>
+        <a href="#">CV</a>
+
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-image">
+        <img src="_MG_0996-CC.jpg">
+    </div>
+
+    <div class="hero-text">
+<p>
+            I am a freshman physics student from Ethiopia with a strong passion
+            for astronomy, astrophysics, and science communication.
+            I engage in research, outreach activities, and citizen science
+            projects.
+        </p>
+
+        <button>View My CV</button>
+
+    </div>
+
+</section>
+
+<section class="quote">
+
+    <button class="arrow" onclick="previousQuote()">
+        &#8592;
+    </button>
+
+    <div class="quote-text">
+        <h1 id="quote">
+            "Humility is not thinking less of yourself,
+            but thinking of yourself less."
+        </h1>
+
+        <p id="author">C.S. Lewis</p>
+    </div>
+
+    <button class="arrow" onclick="nextQuote()">
+        &#8594;
+    </button>
+
+</section>
+<script>
+
+const quotes = [
+    {
+        text: "Humility is not thinking less of yourself, but thinking of yourself less.",
+        author: "C.S. Lewis"
+    },
+
+    {
+        text: "The important thing is not to stop questioning.",
+        author: "Albert Einstein"
+    },
+
+    {
+        text: "Somewhere, something incredible is waiting to be known.",
+        author: "Carl Sagan"
+    },
+
+    {
+        text: "Equipped with his five senses, man explores the universe around him.",
+        author: "Edwin Hubble"
+    }
+];
+
+let current = 0;
+
+function showQuote() {
+    document.getElementById("quote").textContent =
+        '"' + quotes[current].text + '"';
+
+    document.getElementById("author").textContent =
+        quotes[current].author;
+}
+
+function nextQuote() {
+    current++;
+
+    if (current >= quotes.length) {
+        current = 0;
+    }
+
+    showQuote();
+}
+
+function previousQuote() {
+    current--;
+
+    if (current < 0) {
+        current = quotes.length - 1;
+    }
+
+    showQuote();
+}
+
+</script>
+</body>
+</html>
