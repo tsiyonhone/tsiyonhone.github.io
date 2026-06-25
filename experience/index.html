@@ -38,6 +38,62 @@ nav {
     margin-left: 30px;
     font-size: 24px;
 }
+             html {
+    scroll-behavior: smooth;
+}
+
+.experience-layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+
+    padding: 40px 25px;
+
+    background: white;
+    border-right: 2px solid #0d4ea6;
+}
+
+.sidebar h3 {
+    color: #0d4ea6;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.sidebar a:hover {
+    color: #0d4ea6;
+}
+
+.content {
+    flex: 1;
+}
+
+.category-title {
+    color: #0d4ea6;
+
+    font-size: 55px;
+
+    padding: 40px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 3px solid #0d4ea6;
+}
 
             .experience-card {
     max-width: 1200px;
@@ -120,6 +176,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         <a href="tsiyonhone@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
 </nav>
+             <div class="experience-layout">
+
+    <aside class="sidebar">
+
+        <h3>Experience</h3>
+
+        <a href="#research">Research</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#outreach">Outreach & Education</a>
+        <a href="#media">Media & Communication</a>
+        <a href="#service">Service</a>
+
+    </aside>
+
+    <main class="content">
+         <h1 class="category-title" id="research">
+    Research
+</h1>
             <section class="experience-card">
 
     <div class="experience-header">
@@ -157,6 +231,9 @@ distance indicators. Our preprint paper is available on <a href="https://zenodo.
 </div>
 
 </section>
+         <h1 class="category-title" id="leadership">
+    Leadership
+</h1>
 <section class="experience-card">
 
     <div class="experience-header">
@@ -241,6 +318,9 @@ distance indicators. Our preprint paper is available on <a href="https://zenodo.
     </figure>
 </div>
 </section>
+         <h1 class="category-title" id="service">
+    Service
+</h1>
             <section class="experience-card">
 
     <div class="experience-header">
@@ -261,6 +341,9 @@ distance indicators. Our preprint paper is available on <a href="https://zenodo.
 <p>- I analyze and classify celestial objects under Galaxy Zoo, Daily Minor Planet, Backyard Worlds: 
     Planet 9, and Enigmatic Near-Earth Visitors projects. I've classified more than 200 objects under the citizen science.</p>
 </section>
+         <h1 class="category-title" id="outreach">
+    Outreach & Education
+</h1>
              <section class="experience-card">
 
     <div class="experience-header">
@@ -342,6 +425,9 @@ distance indicators. Our preprint paper is available on <a href="https://zenodo.
     </figure>
 </div>
 </section>
+         <h1 class="category-title" id="media">
+    Media & Communication
+</h1>
              <section class="experience-card">
 
     <div class="experience-header">
@@ -409,6 +495,9 @@ distance indicators. Our preprint paper is available on <a href="https://zenodo.
     </figure>
 </div>
 </section>
+             </main>
+
+</div>
               <footer>
 
     <h2>Keep Looking Up 🔭</h2>
